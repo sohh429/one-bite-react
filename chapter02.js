@@ -38,3 +38,21 @@ console.log(returnTrue() || returnFalse());
  
 printName({name:'홍길동'})
 
+/* 
+  파라미터로 전달된 객체의 동작방식
+- 파라미터로 전달된 객체는 참조에 의해 전달됨
+- 함수를 통해 객체의 정보가 변경된다면 원본객체도 변경됨
+
+
+function updateObject(obj) {
+    obj.name = "Updated";  // 객체의 속성 수정
+}
+
+const myObject = { name: "Original" };
+updateObject(myObject);
+console.log(myObject);  // { name: "Updated" }
+
+참조 변경은 함수 내부에서만 가능
+속성 변경은 원본 객체에 직접적인 영향을 미침
+
+*/
