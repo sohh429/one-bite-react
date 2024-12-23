@@ -1,0 +1,4 @@
+.area_chat{width:300px}
+.wrap_chat{display:flex;flex-direction:column;justify-content:flex-end;overflow-y:auto;height:400px;}
+.item_chat{display:-webkit-flex;display:flex;position:relative;max-width:100%;margin-top:6px;padding:4px 8px 4px 5px;border-radius:12px 10px 10px 1px;border:1px solid #eee;box-sizing:border-box;-webkit-align-items:center;align-items:center;}
+.area_chat .util_chat{margin-top:50px;}
