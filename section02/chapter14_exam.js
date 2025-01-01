@@ -5,18 +5,22 @@
 
 document.addEventListener("DOMContentLoaded", ()=> {
     const sendBtn = document.getElementById("btnChat");
-    const txtChat = document.getElementById("txtChat").value;
+    const txtChat = document.getElementById("txtChat");
     const listChat = document.getElementById("chatList");
 
+
+
     sendBtn.addEventListener("click", function () {
-        console.log(txtChat)
-        if(!txtChat){
-            addTxt(txtChat);
+        let txtDetail = txtChat.value;
+        if(txtDetail && txtDetail !== ''){
+            addTxt(txtDetail,()=>{
+                console.log(this);
+            });
         }
     });
 
 });
 
 function addTxt(txt){
-    chatList.insertAdjacentHTML("beforeend", `<div class='item_right'>${txt}</div>`)
+    chatList.insertAdjacentHTML("beforeend", `<div class='item_chat chat_right'>${txt}</div>`)
 }
