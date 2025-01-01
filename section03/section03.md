@@ -10,6 +10,8 @@
 1. then(onFulfilled, onRejected): 비동기 작업이 성공했을 때 실행될 함수를 정의
 2. catch(onRejected): 비동기 작업이 실패했을 때 실행될 함수를 정의
 
+---
+
 
 ### Node.js
 
@@ -30,8 +32,10 @@ version: (1.0.0)  : 배포 버전
 description: 패키지 설명
 entry point: (index.js) 메인으로 사용된 엔트리 포인트
 
-``` * node 명령어  + js 파일 실행 // 경로를 정확히 기입
-package.script ( package.json) 에 명령어 설정 ```
+* node 명령어  + js 파일 실행 // 경로를 정확히 기입
+package.script ( package.json) 에 명령어 설정 
+
+---
 
 ### 모듈 시스템
 기능별로 분리
