@@ -43,6 +43,10 @@ common,js
 es module : package.json에 “type” : “module” 명시
 common,js과 es module는 혼용해서 사용불가
 
+### CommonJS와 ES Modules의 차이
+- CommonJS는 require와 module.exports를 사용.
+- ES Modules는 import와 export를 사용.
+- CommonJS는 Node.js에서 기본적으로 사용 가능하며, ES Modules는 Node.js 14 이상에서 지원되지만 설정이 필요( type : module)
 
 라이브러리는 경로가 아닌 이름으로 명시
 package.json은 명시한 dependencies 를 자동으로 설치해줌
