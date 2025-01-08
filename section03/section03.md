@@ -10,6 +10,8 @@
 1. then(onFulfilled, onRejected): 비동기 작업이 성공했을 때 실행될 함수를 정의
 2. catch(onRejected): 비동기 작업이 실패했을 때 실행될 함수를 정의
 
+---
+
 
 ### Node.js
 
@@ -30,8 +32,10 @@ version: (1.0.0)  : 배포 버전
 description: 패키지 설명
 entry point: (index.js) 메인으로 사용된 엔트리 포인트
 
-``` * node 명령어  + js 파일 실행 // 경로를 정확히 기입
-package.script ( package.json) 에 명령어 설정 ```
+* node 명령어  + js 파일 실행 // 경로를 정확히 기입
+package.script ( package.json) 에 명령어 설정 
+
+---
 
 ### 모듈 시스템
 기능별로 분리
@@ -39,6 +43,10 @@ common,js
 es module : package.json에 “type” : “module” 명시
 common,js과 es module는 혼용해서 사용불가
 
+### CommonJS와 ES Modules의 차이
+- CommonJS는 require와 module.exports를 사용.
+- ES Modules는 import와 export를 사용.
+- CommonJS는 Node.js에서 기본적으로 사용 가능하며, ES Modules는 Node.js 14 이상에서 지원되지만 설정이 필요( type : module)
 
 라이브러리는 경로가 아닌 이름으로 명시
 package.json은 명시한 dependencies 를 자동으로 설치해줌
