@@ -1,28 +1,20 @@
 # 리액트
 
 ## 개발환경설정
-
-- react-app 프로젝트 폴더 생성후 열기
-  
-- nodejs v18이상, 터미널(vscode 하단에서 위로 드래그) node -v로 확인
-  
-- nodejs20으로 검색후 20.18.1설치
+ 
+- nodejs v18이상
   
 - npm create vite@latest ./ 현재폴더에 템플릿 세팅
   
 - Select a framework: React, Select a variant: JavaScript
   
 - npm i - package.json의 의존성 패키지 설치
+
+- devDependencies 는 개발할 때만 사용 되는 라이브러리(lint, test)
   
-- npm run dev - 로컬웹서버실행후 ctrl + 로컬주소클릭
-  
-- index.css가 공통 css이므로 공통 css 복사, App.css 내용 삭제
-  
-- 로컬폰트는 /public/fonts에 넣으면 빌드시 후처리없이 복사됨(정적자산은 /public 사용)
+- public : 이미지 파일, 정적 파일 , 폰트 등 정적자산 
   
 - 이미지는 /src/assets/images에 넣으면 빌드시 파일명 해시처리(캐싱방지), 용량최적화 진행
-  
-- 크롬익스텐션: react devtools
   
 - components 하단 > General > Highlight updates when components render 체크
   
@@ -145,18 +137,5 @@ export default function App() {
 }
 ```
 
-## npm run build
 
-- 기본설정은 서버루트가 기준이며 서버 base폴더 변경가능
 
-```js
-// vite.config.js
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/react-todo/',
-});
-```
