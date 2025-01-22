@@ -2,12 +2,15 @@ import './App.css'
 
 import Register from './components/Register';
 
+import HookExam from './hooks/HookExam';
+
 
 function App() {
 
   return (
     <>
       <Register></Register>
+      <HookExam/>
     </>
   )
 } 
