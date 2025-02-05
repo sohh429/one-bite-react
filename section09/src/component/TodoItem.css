@@ -1,0 +1,7 @@
+.TodoItem{display:flex;gap:20px;align-items:center;padding:10px 0;border-bottom:1px solid rgb(240,240,240);}
+.TodoItem input{width:20px}
+.TodoItem .content{flex:1}
+.TodoItem .date{font-size:14px;color: gray;}
+.TodoItem button{cursor: pointer;color:gray;font-size:14px;border:none;border-radius:5px;padding:5px;}
+.TodoItem.is_done{position:relative}
+.TodoItem.is_done::before{position:absolute;left:0;right:58px;height:1px;background-color:blueviolet;content:''}
