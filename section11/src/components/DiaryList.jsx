@@ -12,7 +12,7 @@ const DiaryList = ({data}) => {
     setSortType(e.target.value);
   }
 
-  const getSortedDate = ()=>{
+  const getSortedData = ()=>{
     return data.toSorted((a,b)=>{
         if(sortType === 'oldest'){
             return Number(a.createdDate) - Number(b.createdDate);
@@ -22,18 +22,27 @@ const DiaryList = ({data}) => {
     })
   }
 
+  const sortedData = getSortedData();
+
   return (
     <div className="DiaryList">
       <div className="menu_bar">
-        <select onChange={onChangeSortType}>
+        <select value={sortType} onChange={onChangeSortType}>
           <option value={"latest"}>최신순</option>
           <option value={"oldest"}>오래된 순</option>
         </select>
         <Button onClick={()=>nav("/new")} text={"새 일기 쓰기"} type={"POSITIVE"} />
       </div>
       <div className="list_wrapper">
-        {data.map((item)=><DiaryItem key={item.id} {...item} />)}
-        
+        {sortedData.length === 0 ? (
+          <div className="item_empty">
+            작성 된 일기가 없습니다.
+          </div>
+        ) : (
+          sortedData.map((item) => (
+            <DiaryItem key={item.id} {...item} />
+          ))
+        )}
       </div>
     </div>
   );

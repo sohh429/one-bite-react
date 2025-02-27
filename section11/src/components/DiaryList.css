@@ -17,3 +17,12 @@
   .DiaryList .menu_bar button {
     flex: 1;
   }
+
+  .DiaryList .item_empty{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    font-size:20px;
+    color:#666
+  }
